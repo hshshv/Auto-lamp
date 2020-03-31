@@ -12,7 +12,6 @@
 #define LDR A0
 #define poten A1
 #define TurnedOnTime 10000
-#define LightSensitivity 20 //רגישות גבוהה יותר - נדלק גם באור גדול יותר
 
 UltrasonicSensor sens(trig, acho);
 Led led(ledpin);
@@ -28,7 +27,7 @@ unsigned int StopAt;
 
 void loop()
 {
-  if (sens.Activated() && analogRead(LDR) < LightSensitivity)//analogRead(poten) / 20
+  if (sens.Activated() && analogRead(LDR) < analogRead(poten))
   {
     led.TurnOn();
     StopAt = 0;
