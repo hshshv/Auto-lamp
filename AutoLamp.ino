@@ -3,8 +3,8 @@
    עם חיישן אולטראסוני \ נפח
 */
 
-#include "Sensors.h"
-#include "Led.h"
+#include "Sensors.h" //download from: github.com/hshshv/Sensors
+#include "Led.h" //download from:  github.com/hshshv/Led
 
 #define trig 4
 #define acho 5
@@ -45,8 +45,4 @@ void loop()
     }
     led.TurnOff();
   }
-/*
-Serial.print("LDR: "); Serial.print(analogRead(LDR));
-Serial.print("    poten: "); Serial.println(analogRead(poten) / 20);
-*/
 }
